@@ -1,0 +1,27 @@
+{
+  "name": "@pixelmind/cli",
+  "version": "0.0.0",
+  "description": "Pixelmind CLI — render-aware feedback for LLM-generated UI",
+  "type": "module",
+  "bin": {
+    "pixelmind": "./dist/index.js",
+    "pm": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": ["pixelmind", "cli"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@pixelmind/sdk": "0.0.0"
+  }
+}

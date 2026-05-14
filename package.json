@@ -1,0 +1,21 @@
+{
+  "name": "pixelmind-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Render-aware feedback loop for LLM-generated UI",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "tsc -b",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
