@@ -10,3 +10,6 @@ coverage/
 *.log
 .idea/
 .vscode/
+
+# smoke-test outputs (regenerated)
+scripts/smoke-*.png

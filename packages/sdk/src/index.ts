@@ -1,4 +1,4 @@
-export { render } from "./render.js";
+export { render, closeBrowser } from "./render.js";
 export { see } from "./see.js";
 export { critique } from "./critique.js";
 export { evaluate } from "./evaluate.js";
