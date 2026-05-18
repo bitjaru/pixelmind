@@ -1,11 +1,23 @@
-import { writeFileSync } from "node:fs";
+import { writeFileSync, existsSync } from "node:fs";
+import { join } from "node:path";
+import { homedir } from "node:os";
 import { evaluate, closeBrowser } from "../packages/sdk/dist/index.js";
 
-if (!process.env.ANTHROPIC_API_KEY) {
-  console.error("ANTHROPIC_API_KEY is not set. Skipping end-to-end smoke test.");
-  console.error("Export the key and re-run to validate see() against real Claude vision.");
+const hasCodex = existsSync(join(homedir(), ".codex", "auth.json"));
+const provider = hasCodex
+  ? "codex"
+  : process.env.OPENAI_API_KEY
+    ? "openai"
+    : process.env.ANTHROPIC_API_KEY
+      ? "claude"
+      : null;
+
+if (!provider) {
+  console.error("No vision backend available.");
+  console.error("Install Codex CLI + `codex login`, or set OPENAI_API_KEY / ANTHROPIC_API_KEY.");
   process.exit(2);
 }
+console.log(`→ provider auto-detect: ${provider}`);
 
 const SAMPLE_JSX = `
 <div className="min-h-screen bg-slate-50 p-8">

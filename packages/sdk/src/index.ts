@@ -1,5 +1,6 @@
 export { render, closeBrowser } from "./render.js";
 export { see } from "./see.js";
+export type { Provider, SeeOptions } from "./see.js";
 export { critique } from "./critique.js";
 export { evaluate } from "./evaluate.js";
 export { refine } from "./refine.js";
