@@ -1,6 +1,9 @@
 {
   "name": "@pixelmind/sdk",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Render-aware feedback loop SDK for LLM-generated UI",
   "type": "module",
   "main": "./dist/index.js",
