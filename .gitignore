@@ -13,3 +13,8 @@ coverage/
 
 # smoke-test outputs (regenerated)
 scripts/smoke-*.png
+
+# smoke-refine intermediate artifacts (regenerated per run)
+scripts/iter-*.png
+scripts/iter-*.tsx
+scripts/iter-*.json

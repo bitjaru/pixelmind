@@ -1,0 +1,21 @@
+{
+  "history": [
+    {
+      "iter": 0,
+      "score": 79,
+      "issueCount": 9
+    },
+    {
+      "iter": 1,
+      "score": 83,
+      "issueCount": 8
+    },
+    {
+      "iter": 2,
+      "score": 85,
+      "issueCount": 7
+    }
+  ],
+  "threshold": 85,
+  "maxIters": 3
+}
